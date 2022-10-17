@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;background-color: rgb(1, 20, 48);
+}
+
+ul{
+    display: flex;
+    position: relative;
+}
+
+ul li{
+   list-style: none;
+   display: flex;
+    position: relative;
+}
+
+ul li a{
+    text-decoration: none;
+    padding: 15px 25px;
+    margin:5px;
+    text-transform: capitalize;
+    color:white;
+    font-size: 22px;
+    border: 1px solid transparent;
+}
+
+a:hover{
+    color: yellow;
+}
+
+/*Segunda parte efectos*/
+
+span:first-child:before{
+    content: "";
+    width:8px;
+    height: 8px;
+    position: absolute;
+    top:17px;
+    left: 17px;
+    background-color: transparent;
+    border: 3px solid yellow;
+    border-width: 3px 0 0 3px;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+span:first-child:after{
+    content: "";
+    width:8px;
+    height: 8px;
+    position: absolute;
+    top:17px;
+    right: 17px;
+    background-color: transparent;
+    border: 3px solid yellow;
+    border-width: 3px 3px 0 0;
+    transition: all 0.2s;
+    
+    opacity: 0;
+}
+
+span:last-child:before{
+    content: "";
+    width:8px;
+    height: 8px;
+    position: absolute;
+    bottom:17px;
+    left: 17px;
+    background-color: transparent;
+    border: 3px solid yellow;
+    border-width: 0 0 3px 3px;
+    transition: all 0.2s;
+    
+    opacity: 0;
+}
+
+span:last-child:after{
+    content: "";
+    width:8px;
+    height: 8px;
+    position: absolute;
+    bottom:17px;
+    right: 17px;
+    background-color: transparent;
+    border: 3px solid yellow;
+    border-width: 0 3px 3px 0;
+    transition: all 0.2s;
+    
+    opacity: 0;
+}
+
+/*Que se muevan las esquinas*/
+
+a:hover span:first-child:before{
+    top:8px;
+    left:8px;
+    opacity: 1;
+}
+
+a:hover span:first-child:after{
+    top:8px;
+    right:8px;
+    opacity: 1;
+}
+
+a:hover span:last-child:before{
+    bottom:8px;
+    left: 8px;
+    opacity: 1;
+}
+
+a:hover span:last-child:after{
+    bottom:8px;
+    right: 8px;
+    opacity: 1;
+}
+
+
+
